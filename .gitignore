@@ -5,3 +5,5 @@ bin/
 *.suo
 obj/
 *.user
+UpgradeLog.htm
+Backup
