@@ -825,7 +825,7 @@ public class ProtoPlatform
 #if CS
         native
         {
-            b = Encoding.UTF8.GetBytes(s);
+            b = System.Text.Encoding.UTF8.GetBytes(s);
             
         }
 #elif JS
@@ -878,7 +878,7 @@ public class ProtoPlatform
         b = null;
 #endif
 #else
-        b = Encoding.UTF8.GetBytes(s);
+        b = System.Text.Encoding.UTF8.GetBytes(s);
 
 #endif
         return b;
@@ -890,7 +890,7 @@ public class ProtoPlatform
 #if CS
         native
         {
-            s = Encoding.UTF8.GetString(bytes);
+            s = System.Text.Encoding.UTF8.GetString(bytes);
         }
 #elif JS
         native
@@ -920,7 +920,7 @@ public class ProtoPlatform
         s = null;
 #endif
 #else
-        s = Encoding.UTF8.GetString(bytes);
+        s = System.Text.Encoding.UTF8.GetString(bytes);
 #endif
         return s;
     }
